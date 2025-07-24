@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodeMaster - Criação Profissional de Sites</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3b82f6;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2563eb;
+    }
+
+    /* Smooth fade-in animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+      animation-duration: 1s;
+    }
+    .fade-in.delay-1 { animation-delay: 0.2s; }
+    .fade-in.delay-2 { animation-delay: 0.4s; }
+    .fade-in.delay-3 { animation-delay: 0.6s; }
+    .fade-in.delay-4 { animation-delay: 0.8s; }
+    .fade-in.delay-5 { animation-delay: 1.0s; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
+      <a href="#inicio" class="text-3xl font-extrabold text-blue-600 hover:text-blue-800 transition">CodeMaster</a>
+
+      <nav class="hidden md:flex space-x-10 font-medium text-gray-700">
+        <a href="#inicio" class="hover:text-blue-600 transition">Início</a>
+        <a href="#servicos" class="hover:text-blue-600 transition">Serviços</a>
+        <a href="#porque" class="hover:text-blue-600 transition">Por que escolher?</a>
+        <a href="#depoimentos" class="hover:text-blue-600 transition">Depoimentos</a>
+        <a href="#contato" class="hover:text-blue-600 transition">Contato</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" aria-label="Abrir menu" class="md:hidden focus:outline-none">
+        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="menu" class="hidden md:hidden bg-white shadow-md">
+      <nav class="flex flex-col space-y-4 py-6 px-8 font-medium text-gray-700">
+        <a href="#inicio" class="hover:text-blue-600 transition" onclick="toggleMenu()">Início</a>
+        <a href="#servicos" class="hover:text-blue-600 transition" onclick="toggleMenu()">Serviços</a>
+        <a href="#porque" class="hover:text-blue-600 transition" onclick="toggleMenu()">Por que escolher?</a>
+        <a href="#depoimentos" class="hover:text-blue-600 transition" onclick="toggleMenu()">Depoimentos</a>
+        <a href="#contato" class="hover:text-blue-600 transition" onclick="toggleMenu()">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 container mx-auto px-6 md:px-12 max-w-7xl">
+
+    <!-- Seção Início -->
+    <section id="inicio" class="text-center py-24">
+      <h1 class="text-5xl md:text-6xl font-extrabold leading-tight mb-6 fade-in delay-1">Transforme sua presença digital com <span class="text-blue-600">CodeMaster</span></h1>
+      <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-12 fade-in delay-2">Desenvolvemos sites modernos, responsivos e sob medida para impulsionar seu negócio na internet.</p>
+      <a href="#servicos" class="inline-block bg-blue-600 text-white px-12 py-4 rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-700 transition fade-in delay-3">Conheça nossos serviços</a>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="py-20">
+      <h2 class="text-4xl font-bold text-center mb-14 fade-in delay-1">Nossos Serviços</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <!-- Serviço 1 -->
+        <article class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition fade-in delay-2">
+          <svg class="w-14 h-14 mb-6 text-blue-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6"></path>
+            <path d="M21 21H3v-2a4 4 0 014-4h10a4 4 0 014 4v2z"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold mb-3 text-center">Criação de Sites Profissionais</h3>
+          <p class="text-gray-700 text-justify">Sites modernos, responsivos e personalizados para que sua empresa tenha a melhor presença digital possível. Criamos designs únicos que refletem sua marca.</p>
+        </article>
+
+        <!-- Serviço 2 -->
+        <article class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition fade-in delay-3">
+          <svg class="w-14 h-14 mb-6 text-blue-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 3h18v18H3z"></path>
+            <path d="M16 11v6M8 11v6M12 11v6M4 7h16"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold mb-3 text-center">Loja Virtual (E-commerce)</h3>
+          <p class="text-gray-700 text-justify">Lojas virtuais completas e seguras para você vender seus produtos online com praticidade e eficiência. Integração com métodos de pagamento e logística.</p>
+        </article>
+
+        <!-- Serviço 3 -->
+        <article class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition fade-in delay-4">
+          <svg class="w-14 h-14 mb-6 text-blue-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 20h9"></path>
+            <path d="M9 20H5a2 2 0 01-2-2V7a2 2 0 012-2h4"></path>
+            <path d="M16 4h5v5"></path>
+            <path d="M12 12h.01"></path>
+            <path d="M12 16h.01"></path>
+          </svg>
+          <h3 class="text-2xl font-semibold mb-3 text-center">Consultoria em Desenvolvimento Web</h3>
+          <p class="text-gray-700 text-justify">Análise e recomendações para otimizar, melhorar e manter seu site atual, garantindo melhor desempenho e segurança.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção Por que escolher -->
+    <section id="porque" class="bg-blue-600 text-white py-20 rounded-lg">
+      <div class="max-w-5xl mx-auto px-6 md:px-12">
+        <h2 class="text-4xl font-extrabold text-center mb-12 fade-in delay-1">Por que escolher a CodeMaster?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+          <div class="fade-in delay-2 flex flex-col items-center text-center">
+            <svg class="w-16 h-16 mb-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 20l9-5-9-5-9 5 9 5z"></path>
+              <path d="M12 12v8"></path>
+              <path d="M3 7v8"></path>
+              <path d="M21 7v8"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-3">Soluções Sob Medida</h3>
+            <p>Cada projeto é único. Desenvolvemos soluções alinhadas aos seus objetivos e ao perfil do seu negócio.</p>
+          </div>
+
+          <div class="fade-in delay-3 flex flex-col items-center text-center">
+            <svg class="w-16 h-16 mb-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-3">Entrega Rápida e Eficiente</h3>
+            <p>Sabemos que o tempo é precioso. Garantimos prazos cumpridos com qualidade e transparência.</p>
+          </div>
+
+          <div class="fade-in delay-4 flex flex-col items-center text-center">
+            <svg class="w-16 h-16 mb-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 13l4 4L19 7"></path>
+            </svg>
+            <h3 class="text-2xl font-semibold mb-3">Suporte e Manutenção</h3>
+            <p>Acompanhamos seu projeto mesmo após a entrega para garantir que tudo funcione perfeitamente.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Depoimentos -->
+    <section id="depoimentos" class="py-20">
+      <h2 class="text-4xl font-bold text-center mb-14 fade-in delay-1">O que dizem nossos clientes</h2>
+      <div class="max-w-6xl mx-auto grid gap-12 md:grid-cols-3 px-6 md:px-12">
+
+        <!-- Depoimento 1 -->
+        <blockquote class="bg-white p-8 rounded-xl shadow-lg fade-in delay-2">
+          <p class="text-gray-700 italic mb-6">"A equipe CodeMaster superou nossas expectativas! O site ficou lindo, rápido e fácil de usar."</p>
+          <footer class="flex items-center space-x-4">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente 1" class="w-12 h-12 rounded-full border-2 border-blue-600" />
+            <div>
+              <p class="font-semibold">Ana Beatriz Silva</p>
+              <p class="text-sm text-gray-500">CEO - Loja XYZ</p>
+            </div>
+          </footer>
+        </blockquote>
+
+        <!-- Depoimento 2 -->
+        <blockquote class="bg-white p-8 rounded-xl shadow-lg fade-in delay-3">
+          <p class="text-gray-700 italic mb-6">"Recomendo fortemente! Atendimento personalizado, prazo cumprido e o site ficou exatamente como queríamos."</p>
+          <footer class="flex items-center space-x-4">
+            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Cliente 2" class="w-12 h-12 rounded-full border-2 border-blue-600" />
+            <div>
+              <p class="font-semibold">Carlos Eduardo</p>
+              <p class="text-sm text-gray-500">Empreendedor Digital</p>
+            </div>
+          </footer>
+        </blockquote>
+
+        <!-- Depoimento 3 -->
+        <blockquote class="bg-white p-8 rounded-xl shadow-lg fade-in delay-4">
+          <p class="text-gray-700 italic mb-6">"Profissionais competentes e sempre disponíveis para tirar dúvidas. Excelente custo-benefício."</p>
+          <footer class="flex items-center space-x-4">
+            <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Cliente 3" class="w-12 h-12 rounded-full border-2 border-blue-600" />
+            <div>
+              <p class="font-semibold">Mariana Alves</p>
+              <p class="text-sm text-gray-500">Marketing - Startup ABC</p>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="bg-gray-100 rounded-lg py-20 px-6 md:px-12 max-w-4xl mx-auto">
+      <h2 class="text-4xl font-extrabold text-center mb-14 fade-in delay-1">Entre em contato</h2>
+      <form id="contact-form" class="space-y-8 max-w-xl mx-auto" onsubmit="return submitForm(event)">
+        <div>
+          <label for="name" class="block text-lg font-medium text-gray-700 mb-2">Nome completo</label>
+          <input type="text" id="name" name="name" required
+            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        </div>
+        <div>
+          <label for="email" class="block text-lg font-medium text-gray-700 mb-2">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        </div>
+        <div>
+          <label for="subject" class="block text-lg font-medium text-gray-700 mb-2">Assunto</label>
+          <input type="text" id="subject" name="subject" required
+            class="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+        </div>
+        <div>
+          <label for="message" class="block text-lg font-medium text-gray-700 mb-2">Mensagem</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full border border-gray-300 rounded-md px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-blue-600 text-white font-semibold py-4 rounded-lg hover:bg-blue-700 transition shadow-lg">Enviar Mensagem</button>
+      </form>
+      <p id="form-status" class="mt-6 text-center text-green-600 font-semibold"></p>
+
+      <div class="mt-16 text-center text-gray-600 space-y-4 text-sm">
+        <p>📞 Telefone: <a href="tel:+5511999999999" class="text-blue-600 hover:underline">+55 (11) 99999-9999</a></p>
+        <p>📧 Email: <a href="mailto:contato@codemaster.com.br" class="text-blue-600 hover:underline">contato@codemaster.com.br</a></p>
+        <p>📍 São Paulo, Brasil</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-white shadow-inner mt-20 py-8 text-center text-gray-600 text-sm">
+    &copy; 2025 CodeMaster. Todos os direitos reservados. | Desenvolvido por você, com ajuda da IA
+    <div class="mt-3 space-x-6">
+      <a href="#" aria-label="Facebook" class="hover:text-blue-600 transition">Facebook</a>
+      <a href="#" aria-label="Twitter" class="hover:text-blue-600 transition">Twitter</a>
+      <a href="#" aria-label="LinkedIn" class="hover:text-blue-600 transition">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script>
+    // Toggle menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', toggleMenu);
+
+    function toggleMenu() {
+      menu.classList.toggle('hidden');
+    }
+
+    // Form submit simulation
+    function submitForm(event) {
+      event.preventDefault();
+      const status = document.getElementById('form-status');
+      status.textContent = 'Enviando mensagem...';
+      // Simula envio de mensagem
+      setTimeout(() => {
+        status.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
+        event.target.reset();
+      }, 2000);
+      return false;
+    }
+  </script>
+</body>
+</html>
